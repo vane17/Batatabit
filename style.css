@@ -1,0 +1,590 @@
+
+/*
+Posicionamiento --> static, absolute, relative, fixed
+Modelo de caja (Box model) --> margin, border, padding, content
+Tipografía --> tipos, tamaños de fuente, etc
+Estilos visuales --> box-shadow, border-radius, gradient, etc
+Otros --> reglas CSS y más
+*/
+
+:root {   /*variables- COLORES de FIGMA*/
+    --bitcoin-orage: #F7931A;
+    --soft-orage:#FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black:#201E1C;
+    --black:  #282623;
+    --grey: #BABABA;
+    --off-white:#FAF8F7;
+    --just-white: #FFFFFF;
+} 
+
+
+*{
+    box-sizing: border-box; /*para asegurar que dimension contenedor no sean modificados*/
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%; /*1rem=10px*/
+    font-family:'DM Sans', sans-serif; /*toda es de este tipo de letra solo el otro para una seccion*/
+}
+
+header {
+    position: relative; /*no pierde posicion, y se puede mover en todos lados*/
+    display: flex;
+    flex-direction: column; /*direccion a la que se acomoda*/
+    justify-content: center; /*centra el contenido*/
+    width: 100%;
+    min-width: 320; /*en width no se va hacer mas chico de 320px*/
+    height: 334px;
+    text-align: center; /*alinea el centro*/
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%)
+}
+
+header img{
+    width: 150px;
+    height: 24px;
+    margin-top: 60px;
+    align-self: center; /*forma de centar elemento que tenga contenedor flex*/
+}
+
+.header--title-container{
+    width: 90%; /*siempre esta ocupadando un 90% de entre 288 y 900*/
+    min-width: 288px;
+    max-width: 900px;
+
+    height: 218px;
+    margin-top: 40px; /*para que se separe del logotivo*/
+    text-align: center; /*alinea texto*/
+    align-self: center; /*porque se utiliza display flex*/
+}
+
+.header--title-container h1{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height:2.6rem ; /*dimension entre lineas*/
+    color:var(--just-white);
+}
+
+.header--title-container p{
+    margin-top: 25px; /*espacio entre titulo y parrafo*/
+    font-size: 1.4rem; /*14px*/
+    font-weight: 500;
+    line-height:1.8rem ; /*dimension entre lineas*/
+    color:var(--soft-orage);
+}
+
+.header--title-container .header--button{
+    position: absolute; /*se reposiciona en cualquier parte del header su padre elemento pierde su posicion*/
+    left: calc(50% - 118px); /*para centrar boton, que se vaya
+     al centro con el 50% y 118para posicionar*/
+    top: 270px;
+    display: block; 
+    margin-top: 35px;
+    padding: 15px; /*crece la caja*/
+    width: 229px;
+    height: 48px;
+    background-color: var(--off-white);
+    color: var(--warm-black);
+
+    /*Sombra */
+    box-shadow: 0px 4px 8px rgba(89,73,30,0.16) ; /*permite agragar sombra*/
+    border: none; /*en caso de que exista un borde definido*/
+    border-radius: 5px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-decoration: none; /*quita la linea inferior de link*/
+    color: var(--black);
+}
+
+.header--button span{
+    display: inline-block; /*siempre viene en block*/
+    width: 13px;
+    height: 8px;
+    margin-left: 10px; /*para separarlo de la palabra planeas*/
+    background-image: url("./assets/icons/down-arrow.svg"); /*../ dos puntos dice que se salga de una carpeta afuera y bsuque en la otr*/
+}
+
+main{
+    width: 100%;
+    height: auto; /*mismo se calcula*/
+    background-color: var(--off-white);
+    min-width: 320 px;
+}
+
+.main-exchange-container{
+    width: 100%;
+    height: auto;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.main-exchange--title{
+    width: 90%;
+    min-width: 288px; /*limita que tan chico se pone*/
+    max-width: 900px;
+    margin: 0  auto;
+}
+
+.main-exchange-container .backgroundId{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; /*posicion centro*/
+    margin-bottom: 50px ; /*para alejar la imagen del texto*/
+    background-image: url("./assets/img/Bitcoin.svg"); /*se asegura que
+    imagen siempre en el centro y no se repita*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /*si imagen chica al contenedor replica la imagen*/
+
+}
+
+.main-exchange-container h2{
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--black);
+
+}
+
+.main-exchange-container p{
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.6rem;
+    color: #757575;  
+}
+
+.main-currency-table, .main-commissions-table {
+    width: 70%;
+    min-width: 235px;
+    max-width: 500;
+    height: 360px;
+    margin:0 auto; /*centro*/
+    font-family: "inter",sans-serif;
+
+
+}
+.main-currency-table .currency-table--title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--bitcoin-orage);
+    position: relative;
+    display: inline-block;
+    right: 80px;
+
+}
+
+.main-commissions-table .commissions-table--title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    position: relative;
+    display: inline-block;
+    right: 60px;
+
+}
+
+
+
+.currency-table--conteiner, .commissions-table--conteiner{
+    width: 90%;
+    min-width: 230px;
+    max-width: 300px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.currency-table--conteiner table, .commissions-table--conteiner table{
+    width: 100%;
+    height: 100%; 
+
+}
+
+.currency-table--conteiner td, .commissions-table--conteiner td{
+    width: 50%;
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.9rem;
+    color: var(--grey);
+    background-color: var(--just-white);
+}
+
+.currency-table--conteiner .table__top-left,
+.commissions-table--conteiner .table__top-left
+{
+    border-radius: 15px 0 0 0 ;
+}
+
+.currency-table--conteiner .table__top-right,
+.commissions-table--conteiner .table__top-righ
+
+{
+    border-radius: 0 15px 0 0;
+}
+
+.currency-table--conteiner .table__bottom-left,
+.commissions-table--conteiner .table__bottom-left
+{
+    border-radius: 0 0 0 15px ;
+}
+.currency-table--conteiner .table__bottom-right,
+.commissions-table--conteiner .table__bottom-right
+{
+    border-radius: 0 0 15px 0;
+}
+
+
+.currency-table--conteiner .table__right,
+.commissions-table--conteiner .table__right
+{
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height:1.7rem ; /*salto de linea*/
+    color: #757575;
+}
+
+.currency-table--conteiner .down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-down.svg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.currency-table--conteiner .up{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    background-image: url("./assets/icons/trending-up.svg");
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.currency-table--date{
+    width: 190px;
+    height: 31px;
+    margin: 0 auto; /*para centrarse*/ 
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-orage);
+    border-radius: 8px;
+
+}
+
+.currency-table--date p,
+.commissions-table--date p
+{
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+    font-weight: 300;
+}
+
+.commissions-table--date{
+    width: 190px;
+    height: 31px;
+    margin: 0 auto; /*para centrarse*/ 
+    margin-top: 15px;
+    padding: 8px;
+    background-color: var(--soft-blue);
+    border-radius: 8px;
+
+}
+
+.main-product-detail{
+    position: relative;
+    width: 100% ;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+
+.product-detail--batatalogo{
+    position: absolute; /*busca contenedor padre
+    para que tenga posotion relative para basarse de ahi*/
+    width: 40px;
+    height: 25px;
+    top: -10px; /*negativo para que pueda salirse de la 
+     por el paddin*/
+    left: calc(50% - 20px); /*para que quede centrado*/
+    background-image: url("./assets/icons/batata.svg");
+
+}
+
+.main-detail--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto; /*centra*/
+    margin-top: 50px;
+    text-align: center;
+}
+
+.main-detail--title h2{
+    margin-bottom: 20px ; /*separa titulo del parrafo*/
+    font-size: 2.4rem;
+    font-weight: bold ; /*ANCHOE DE FUENTE*/
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.main-detail--title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.product-detail--card{
+    width: 90%;
+    min-width: 288px;
+    max-width: 400px; /*para que no crezca mas y luego se reacomoden*/
+    min-height: 150px; /*IMPORTANTE PARA QUE SI EL CONTENIDO ES MAS GRANDE
+    CREZCA CON EL Y NO SE SALGA*/
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var (--black);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+}
+
+
+
+.product--card-title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--just-white);
+}
+
+.product--cardbody{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color:#808080;
+}
+
+
+.product-detail--card .icono{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+
+
+.clock {
+    background-image: url('./assets/icons/clock.svg');
+}
+
+.eye {
+    background-image: url('./assets/icons/eye.svg')
+}
+
+.dolar {
+    background-image: url('./assets/icons/dollar-sign.svg');
+}
+
+.cicle{
+    background-image: url('./assets/icons/check-circle.svg');
+}
+
+.bitcoin-img-conteiner{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+    background-image: url("./assets/img/bitcoinbaby2x.jpg");
+    background-position: center;   
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.bitcoin-img-conteiner h2{
+    padding-top: 60px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+
+}
+
+.main-plans-conteiner{
+    width: 100%;
+    min-width: 320px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.plans--title{
+    width: 90%;
+    min-width: 288px;
+    height: auto; /*debende del contenido*/
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.plans--title h2{
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height:  2.6rem;
+    color: var(--black);
+}
+
+
+.plans--title p {
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight:500 ; /*ancho de fuente*/
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.plans-container--card{
+    position: relative; /*porque la etiqueta de parrafo 
+    tiene que salir de este contenedor*/
+    scroll-snap-align: center; /*centra las tarjetas*/
+    width: 70%;
+    min-width: 190px;
+    max-width: 300px;
+    height: 250px;
+    margin: 50px 5px  0; /*espacio entre tarjetas en vez de gab */
+    padding: 0 15px;
+    background-color: var(--just-white);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+}
+
+
+.recomended{
+    position: absolute; /*padre tiene posicion relative entonces si se puede*/
+    width: 120px;
+    height: 31px;
+    left: calc(50% - 60px);
+    top:-15px;
+    font-size: 1.2rem;
+    padding: 6px; /*lo empuja hacia dentro, centrado*/
+    background-color:  var(--bitcoin-orage);
+    border-radius: 8px;
+    color: var(--just-white);
+}
+
+.plan-card--title{
+    padding-top: 30px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: black;
+}
+
+.plan-card--price{
+    padding: 5px 0;
+    font-size: 5.2rem;
+    font-weight: bold;
+    line-height: 5.3rem;
+    color: black;
+
+}
+
+.plan-card--price span{
+    font-size: 1.2rem;
+    font-weight: 300;
+    vertical-align: 25px; /*para subir el texto*/
+}
+
+.plan-card--saving{
+    font-size: 1.2rem;
+    color: #757575;
+    
+}
+
+.plan-card--ca{
+    width: 150px;
+    height: 48px;
+    margin-top:20px;
+    background-color: #faf8f7 ;
+    border: 2px solid var(--bitcoin-orage);
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--black);
+    font-family:'DM Sans', sans-serif;
+}
+
+.plan-card--ca span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("./assets/icons/orange-right-arrow.svg");
+    vertical-align: text-bottom;/*para alinear el texto con el icono*/
+}
+
+
+/*ESCROLL HORIZONTAL*/
+.plans-conteiner--slider{
+    display: flex;
+    /*gap:50px;  genera un espacio entre elementos
+     modulo de flex, como no esta en todos los navegadores se puede poner margie*/
+    height: 316px; /*mas  alto que las tarjetas*/
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+}
+
+/*se puede cambiar los estilos de los scrol*/
+
+footer{
+    display: flex; /*para que uno vaya al frente del otro*/
+    width: 100%;
+    height: 150px;
+    background-color: var(--bitcoin-orage);
+
+}
+
+footer section{
+    display: flex; /*para centrar ventical y horziontalmente*/
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer .left ul{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    list-style: none; /*quita puntitos*/
+}
+
+.left li{
+    margin:10px 0;
+}
+
+.left a{
+    text-decoration: none; /*quitar lineas del hiperbinculo*/
+    color:  var(--just-white);
+}

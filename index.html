@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap"   rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/tablet.css" media="(min-width: 930px)">
+
+
+</head>
+<body>
+    <header>
+        <img src="./assets/img/logo.svg" alt="">
+        <div class="header--title-container"> 
+            <!-- 
+                header=bloque title-conteiner=elemento (contenedor titulo)
+                contenedor, usas clases cuando etiqueta se usa en mas lados -->
+            <h1>La próxima revolución en el intercambio de criptomonedas.</h1>
+            <p>Batatabit te ayuda a navegar entre los diferentes precios y tendencias.</p>
+
+            <a href="#plans"  class="header--button">Conoce Nuestros Planes <span></span></a> 
+            <!-- etiqueta a le puedo dar estilos para que se convierta en boton 
+                Spam es comsodin que ayuda a poner iconos o textos dentro de una etiqueta
+                DIV etiqueta de relleno(apoyo) que ayuda a dar mas contexto al layout
+                href=plans es decir a la seccion clase donde quiera que vaya cuando le da clik-->
+        </div>
+
+    </header>
+    <main>
+        <section class="main-exchange-container">
+            <div class="backgroundId"></div>
+            <div class="main-exchange--title"> 
+                <h2>Visibilizamos todas las tasas de cambio</h2>
+                <p>
+                    Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.
+                </p>
+            </div>
+
+            <section class="main-tables-container">
+                <div class="main-currency-table">
+                    <p class="currency-table--title">Monedas</p>
+                    <div class="currency-table--conteiner">
+                        <table>
+                            <tr> <!-- filas de las tablas -->
+                                <td class="table__top-left">Bitcoin</td> <!-- informacion fila -->
+                                <td class="table__top-right table__right">$1.96 <span class="down"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td>Ethereum</td> 
+                                <td class="table__right" >$0.07<span class="up"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td>Ripple</td> 
+                                <td class="table__right">$2.15 <span class="down"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td class="table__bottom-left">Stellar</td> 
+                                <td class="table__bottom-right table__right" >4.96 <span class="down"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="currency-table--date">
+                        <p><b>Actualizado:</b> 19 de Julio 23.45</p>
+                    </div>
+                </div>
+
+
+                <div class="main-commissions-table">
+                    <p class="commissions-table--title">Comisiones</p>
+                    <div class="commissions-table--conteiner">
+                        <table>
+                            <tr> <!-- filas de las tablas -->
+                                <td class="table__top-left">Britrade</td> <!-- informacion fila -->
+                                <td class="table__top-right table__right">$1.96 <span class="down"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td>Bitpreco</td> 
+                                <td class="table__right" >$0.07<span class="up"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td>Novadax</td> 
+                                <td class="table__right">$2.15 <span class="down"></span></td>
+                            </tr> 
+                            <tr> 
+                                <td class="table__bottom-left">Coinext</td> 
+                                <td class="table__bottom-right table__right" >4.96 <span class="down"></span></td>
+                            </tr> 
+                        </table>
+                    </div>
+                    <div class="commissions-table--date">
+                        <p><b>Actualizado:</b> 19 de Julio 23.45</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="main-product-detail">
+            <span class="product-detail--batatalogo"></span>
+            <div class="main-detail--title">
+                <h2>Creamos un producto sin comparación.</h2>
+                <p> Confiable y diseñado para su uso diario.</p>
+            </div>
+            <section class="product-cards--container">
+                <article class="product-detail--card">
+                    <span class="clock icono"></span> <!-- para ingresar icono y que sea coo background -->
+                    <p class="product--card-title">
+                        Tiempo real
+                    </p> <!-- Encabezado -->
+                    <p  class="product--cardbody">
+                        Nuestro API toma información minuto a minuto
+                        sobre las tasas que más determinan el comportamiento.
+                    </p> <!-- Texto -->
+                </article>
+
+                <article class="product-detail--card">
+                    <span class="eye icono"></span> <!-- para ingresar icono y que sea coo background -->
+                    <p class="product--card-title">
+                        No hay tasas escondidas
+                    </p> <!-- Encabezado -->
+                    <p  class="product--cardbody">
+                        Ni en la compra o al momento de exit, Batabit siempre
+                         te muestra el costo real de lo que estás adquiriendo.
+                    </p> <!-- Texto -->
+                </article>
+
+                <article class="product-detail--card">
+                    <span class="dolar icono"></span> <!-- para ingresar icono y que sea coo background -->
+                    <p class="product--card-title">
+                        Compara monedas
+                    </p> <!-- Encabezado -->
+                    <p  class="product--cardbody">
+                        No más rumores, con Babtabit sabrás el valor real de 
+                        cada moneda en el mercado actual.
+                    </p> <!-- Texto -->
+                </article>
+
+                <article class="product-detail--card">
+                    <span class="cicle icono"></span> <!-- para ingresar icono y que sea coo background -->
+                    <p class="product--card-title">
+                        Información confiable
+                    </p> <!-- Encabezado -->
+                    <p  class="product--cardbody">
+                        Nuestras fuentes están 100% verificadas y continuamos 
+                        auditando su contenido mientras se actualizan.
+                    </p> <!-- Texto -->
+                </article>
+
+            </section>
+        </section>
+
+        <section class="bitcoin-img-conteiner">
+            <h2>Conocelo Hoy</h2>
+        </section>
+
+        <section id="plans" class="main-plans-conteiner"> <!-- id es para cuando le den clik al boton de arriba se dirija aqui -->
+            <div class="plans--title">
+                <h2>Escoge el plan que mejor se ajuste a ti.</h2> 
+                <p>Cualquier plan te da acceso completo a nuestra plataforma.</p>
+            </div>
+
+            <section class="plans-conteiner--slider">
+                <article class="plans-container--card">
+                    <p class="recomended">Recomendado</p>
+                    <div class="plans-info-container">
+                        <h3 class="plan-card--title">Pago Anual</h3>
+                        <p class="plan-card--price"><span>$</span>99</p>
+                        <p class="plan-card--saving">*Ahorras $129 comparado al plan mensual.</p>
+                        <button class="plan-card--ca">Escoger este <span></span></button>
+                    </div>
+                </article>
+
+                <article class="plans-container--card">
+                    <p class="recomended">basico</p>
+                    <div class="plans-info-container">
+                        <h3 class="plan-card--title">Pago mensual</h3>
+                        <p class="plan-card--price"><span>$</span>19</p>
+                        <p class="plan-card--saving">*Plan basico aunque con toas ventajas.</p>
+                        <button class="plan-card--ca">Escoger este <span></span></button>
+                    </div>
+                </article>
+
+                <article class="plans-container--card">
+                    <p class="recomended">Limitado</p>
+                    <div class="plans-info-container">
+                        <h3 class="plan-card--title">De por vida</h3>
+                        <p class="plan-card--price"><span>$</span>199</p>
+                        <p class="plan-card--saving">*Exclusivo para los primeros tres clientes.</p>
+                        <button class="plan-card--ca">Escoger este <span></span></button>
+                    </div>
+                </article>
+            </section>
+          
+        </section>
+    </main>
+    <footer>
+        <section class="left">
+           <ul>
+               <li><a href="#">Linkedin</a></li><!--  #para que no reinicie la pagina -->
+               <li><a href="#">Cruschbase</a></li>
+               <li><a href="#"> Hackernews</a></li>
+           </ul>
+
+        </section>
+        <section class="right">
+            <img src="./assets/img/logo-footer.svg" alt="Logo de batatabit 2020">
+        </section>
+    </footer>  
+</body>
+</html>

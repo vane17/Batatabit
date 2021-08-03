@@ -1,0 +1,25 @@
+.main-tables-container{
+    display: flex;
+    width: 930px;
+    margin: 0 auto;
+}
+
+
+
+.product-cards--container{
+    display: flex;
+    /*para que no geenre un over flow despues del flex:*/
+    flex-wrap: wrap;
+    width: 930px;
+    margin: 0 auto;
+
+}
+
+
+
+
+.plans-conteiner--slider{ /*tarjetas*/
+    justify-content: center; /*porque usamos flex, centra todo el contenido*/
+}
+
+
