@@ -7,10 +7,8 @@
 - CSS
 
 ### Visitalo en el siguiente link
-[[Batatabit]][Batatabit]
 
-
-[Batatabit]: https://vane17.github.io/Batatabit/
+[Batatabit](http://https://vane17.github.io/Batatabit/ "Batatabit")
 
 
 > Este proyecto se realizo con los conocimientos adquiridos en Platzi.💚
