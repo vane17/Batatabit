@@ -492,14 +492,10 @@ main{
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
-    box-shadow: 0px 4px 8px #836121;
+    box-shadow: 0px 8px 15px #836121;
     border: solid 1px #516a80
 }
 
-.plans-container--car:hover{
-    transform: scale(3); /*aumenta el tamaño de la imagen*/
-    opacity:0.8;
-}
 
 
 
