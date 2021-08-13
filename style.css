@@ -488,7 +488,7 @@ main{
     min-width: 190px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 5px  0; /*espacio entre tarjetas en vez de gab */
+    margin: 50px 5px  30px; /*espacio entre tarjetas en vez de gab */
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
