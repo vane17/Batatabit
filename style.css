@@ -90,14 +90,20 @@ header img{
     color: var(--warm-black);
 
     /*Sombra */
-    box-shadow: 0px 4px 8px rgba(89,73,30,0.16) ; /*permite agragar sombra*/
-    border: none; /*en caso de que exista un borde definido*/
-    border-radius: 5px;
+    box-shadow: 0px 8px 15px #836121 ; /*permite agragar sombra*/
+    border: solid 1px #516a80; /*en caso de que exista un borde definido*/
+    border-radius: 20px;
     font-size: 1.4rem;
     font-weight: bold;
     text-decoration: none; /*quita la linea inferior de link*/
     color: var(--black);
 }
+
+.header--title-container .header--button:hover{
+    transform:scale(1.1); /*aumenta el tamaño de la imagen*/
+    opacity: 0.8;
+}
+
 
 .header--button span{
     display: inline-block; /*siempre viene en block*/
@@ -105,7 +111,9 @@ header img{
     height: 8px;
     margin-left: 10px; /*para separarlo de la palabra planeas*/
     background-image: url("./assets/icons/down-arrow.svg"); /*../ dos puntos dice que se salga de una carpeta afuera y bsuque en la otr*/
+
 }
+
 
 main{
     width: 100%;
@@ -139,6 +147,15 @@ main{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; /*si imagen chica al contenedor replica la imagen*/
+    
+}
+
+.main-exchange-container .backgroundId:hover {
+    transform: rotate(180deg);
+    transition: 1000ms all;
+    transform-origin: center;
+    object-fit: cover;
+
 
 }
 
@@ -475,8 +492,16 @@ main{
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(89,73,30,0.16);
+    box-shadow: 0px 4px 8px #836121;
+    border: solid 1px #516a80
 }
+
+.plans-container--car:hover{
+    transform: scale(3); /*aumenta el tamaño de la imagen*/
+    opacity:0.8;
+}
+
+
 
 
 .recomended{
