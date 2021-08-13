@@ -7,7 +7,6 @@
 - CSS
 
 ### Visitalo en el siguiente link
-[[Batatabit]][Batatabit]
 
 
 [Batatabit]: https://vane17.github.io/Batatabit/
